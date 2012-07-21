@@ -1,4 +1,15 @@
 TechBlog::Application.routes.draw do
+
+
+
+
+match '/contact', to: 'static_pages#contact'
+match '/resume', to: 'static_pages#resume'
+match '/projects', to: 'static_pages#projects'
+match '/about', to: 'static_pages#about'
+
+
+   root :to => 'static_pages#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +59,7 @@ TechBlog::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+
 
   # See how all your routes lay out with "rake routes"
 
