@@ -1,0 +1,18 @@
+/* header */
+
+#logo {
+text-transform: uppercase;
+letter-spacing: -1px;
+float: left;
+font-size: 1.7em;
+padding-top: 9px;
+font-weight: bold;
+line-height: 1;
+/* margin-right: 10px;*/
+
+&:hover {
+text-decoration: none;
+}
+
+
+}
