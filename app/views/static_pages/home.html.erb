@@ -1,21 +1,27 @@
 <% provide(:title, 'Home') %>
+<div class="container-fluid">
 
-<div class = "center hero-unit">
-<% if signed_in? %> <h1>Admin Mode</h1><% end %>
-<h1>Welcome to my blog!</h1>
+  <div class = "row-fluid">
+    <div class = "center  hero-unit">
+      <h1>Welcome to my blog!</h1>
+      <% if signed_in? %> <h1>Admin Mode</h1><% end %>
+      <h2> This is the home page for Matt Tse's tech blog </h2>
+    </div>
+  </div>
 
-<h2> This is the home page for Matt Tse's tech blog </h2>
-
-<div class="span8">
-    <% if @user.posts.any? %>
+  <div class="row-fluid">
+    <div class="span3">
+      <h3>dates</h3>
+    </div>
+    <div class="span9">
+      <% if @user.posts.any? %>
       <h3>Posts (<%= @user.posts.count %>)</h3>
       <ol class="posts">
-        <%= render @posts %>
+	<%= render @posts %>
       </ol>
+      <% end %>
 
-    <% end %>
-  </div>
-</div>
+    </div>
 
-
-
+  </div><!--row fluid-->
+</div><!--fluid container-->

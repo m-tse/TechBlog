@@ -1,5 +1,5 @@
-<li>
-  <span class="title"><%= post.title %></span>
+<li class="postElement">
+  <h3 class="title"><%= post.title %></h3>
   <span class="content"><%= post.content %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(post.created_at) %> ago.
