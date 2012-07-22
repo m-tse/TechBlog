@@ -1,6 +1,7 @@
 <% provide(:title, 'Home') %>
 
 <div class = "center hero-unit">
+<% if signed_in? %> <h1>Admin Mode</h1><% end %>
 <h1>Welcome to my blog!</h1>
 
 <h2> This is the home page for Matt Tse's tech blog </h2>
