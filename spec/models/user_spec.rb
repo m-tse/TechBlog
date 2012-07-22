@@ -11,7 +11,7 @@ describe User do
   it {should respond_to(:password)}
   it { should respond_to(:remember_token)}
   it { should respond_to(:authenticate)}
-
+  it { should respond_to(:posts)}
   describe "return value of authenticate method" do
     before { @user.save }
     let(:first_user) { User.first}
@@ -32,4 +32,20 @@ describe User do
     before { @user.save}
     its(:remember_token) { should_not be_blank }
   end
+
+  describe "post associations" do
+
+    before { @user.save}
+    let!(:older_post) do
+      FactoryGirl.create(:post, user: @user, created_at: 1.day.ago)
+    end
+    let!(:newer_post) do
+      FactoryGirl.create(:post, user: @user, created_at: 1.hour.ago)
+    end
+
+    it "should have the right microposts in the right order" do
+      @user.posts.should == [newver_post, older_post]
+    end
+  end
+
 end

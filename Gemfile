@@ -4,6 +4,7 @@ gem 'rails', '3.2.6'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
 gem 'factory_girl_rails'
+gem 'faker'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -12,6 +13,7 @@ gem 'factory_girl_rails'
 group :development, :test do
     gem 'rspec-rails'
     gem 'sqlite3'
+    gem 'factory_girl_rails'	
 end
 
 # Gems used only for assets and not required

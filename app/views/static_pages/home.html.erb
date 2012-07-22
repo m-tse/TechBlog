@@ -5,3 +5,17 @@
 <h1>Welcome to my blog!</h1>
 
 <h2> This is the home page for Matt Tse's tech blog </h2>
+
+<div class="span8">
+    <% if @user.posts.any? %>
+      <h3>Posts (<%= @user.posts.count %>)</h3>
+      <ol class="posts">
+        <%= render @posts %>
+      </ol>
+
+    <% end %>
+  </div>
+</div>
+
+
+

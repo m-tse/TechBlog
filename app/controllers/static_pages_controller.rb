@@ -1,6 +1,10 @@
 class StaticPagesController < ApplicationController
   def home
+
+    @user = User.first
+    @posts = @user.posts
   end
+
 
   def contact
   end
