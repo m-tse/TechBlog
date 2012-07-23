@@ -4,6 +4,9 @@ describe "StaticPages" do
 
   let(:base_title) { "Matthew Tse's Blog"}
   describe "Home page" do
+    let(:user) { FactoryGirl.create(:user)}
+    before { @post = user.posts.build(content: "Lorem ipsum", title: "lorem ipsum?")}
+
     it "should have home title" do
       visit 'root'
       page.should have_selector('title', :text => "#{base_title} | Home")

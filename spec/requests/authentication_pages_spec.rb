@@ -12,7 +12,11 @@ describe "AuthenticationPages" do
   end
 
   describe "signin" do
-    before { visit signin_path}
+    let(:user) { FactoryGirl.create(:user)}
+     before do 
+      visit signin_path
+      @post = user.posts.build(content: "Lorem ipsum", title: "NEW POST")
+    end
 
     describe "with invalid information" do
       before { click_button "Sign in"}

@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
 
-    @user = User.find_by_email("matt.s.tse@gmail.com")
+    @user = User.first
     @posts = @user.posts
   end
 

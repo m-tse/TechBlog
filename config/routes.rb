@@ -1,15 +1,16 @@
 TechBlog::Application.routes.draw do
-  get "users/new"
+
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :posts, only: [:create, :destroy]
 
-
-
+match '/new_post', to: 'posts#create'
 match '/contact', to: 'static_pages#contact'
 match '/resume', to: 'static_pages#resume'
 match '/projects', to: 'static_pages#projects'
 match '/about', to: 'static_pages#about'
+match '/signup', to: 'users#new'
 match '/signin', to: 'sessions#new'
 match '/signout', to: 'sessions#destroy', via: :delete
 
