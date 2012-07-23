@@ -1,8 +1,10 @@
 class StaticPagesController < ApplicationController
   def home
 
-    @user = User.first
+    @user = User.find_by_email("matt.s.tse@gmail.com")
+    if(@user!=nil)
     @posts = @user.posts
+    end
   end
 
 
