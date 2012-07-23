@@ -12,6 +12,11 @@ class StaticPagesController < ApplicationController
   end
 
   def resume
+    @resumeSelector = :projects
+  end
+
+  def resumeSelect(resumeSelector)
+    @resumeSelector=resumeSelector
   end
 
   def projects
