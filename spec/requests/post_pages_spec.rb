@@ -5,6 +5,14 @@ describe "Post pages" do
   subject { page }
 
   let(:user) { FactoryGirl.create(:user) }
+
+  describe "should not be accessible to non admin users" do
+    before { visit new_post_path}
+    it {should_not have_content('post')}
+  end
+
+
+
   before { sign_in user }
 
   describe "micropost creation" do
@@ -13,7 +21,7 @@ describe "Post pages" do
     describe "with invalid information" do
 
       it "should not create a micropost" do
-        expect { click_button "Post" }.should_not change(Micropost, :count)
+        expect { click_button "Post" }.should_not change(Post, :count)
       end
 
       describe "error messages" do
@@ -28,7 +36,7 @@ describe "Post pages" do
         fill_in 'micropost_content', with: "Lorem ipsum" 
       end
       it "should create a micropost" do
-        expect { click_button "Post" }.should change(Micropost, :count).by(1)
+        expect { click_button "Post" }.should change(Post, :count).by(1)
       end
     end
   end

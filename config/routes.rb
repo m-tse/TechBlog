@@ -5,7 +5,7 @@ TechBlog::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts, only: [:create, :destroy]
 
-match '/new_post', to: 'posts#create'
+match '/new_post', to: 'posts#new'
 match '/contact', to: 'static_pages#contact'
 match '/resume', to: 'static_pages#resume'
 match '/projects', to: 'static_pages#projects'

@@ -1,14 +1,22 @@
 FactoryGirl.define do
+  factory :adminUser do
+    name "Matthew Tse"
+    password "3af44c4k"
+    password_confirmation "3af44c4k"
+    email "matt.s.tse@gmail.com"
+  end
+
+
   factory :user do
-    name     "Matthew Tse"
+    name     "Joe Schmo"
     password "foobar"
     password_confirmation "foobar"
-    email "matt.s.tse@gmail.com"
+    email "foo@bar.com"
   end
 
   factory :post do
     content "Post content"
     title "Post Title"
-    user
+    adminUser
   end
 end

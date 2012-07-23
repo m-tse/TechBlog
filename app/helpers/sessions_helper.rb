@@ -9,6 +9,10 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def admin_signed_in?
+    current_user==User.find_by_email("matt.s.tse@gmail.com")
+  end
+
   def current_user=(user)
     @current_user = user
   end

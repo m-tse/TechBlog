@@ -7,7 +7,16 @@ class PostsController < ApplicationController
       flash[:success] = "Post created!"
       redirect_to root_path
     else
-      render 'static_pages/home'
+      render 'posts/new'
+    end
+  end
+
+  def new
+    if admin_signed_in?
+      @post = current_user.posts.build
+    else
+      flash[:error] = "Only the admin user can create new posts!"
+      redirect_to root_path
     end
   end
 
