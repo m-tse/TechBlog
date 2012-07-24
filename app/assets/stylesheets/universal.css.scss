@@ -7,10 +7,20 @@ body { padding-top: 60px;}
 /* section {overflow: auto;} */
 .center { text-align: center;}
 .center h1 { margin-bottom: 10px;}
-/* textarea { resize:vertical} */
+/*  textarea { resize:vertical} */
+
+/* word wrap paragraphs */
+p {
+word-wrap:break-word;
+}
 
 
 .AdminMode {
 color:red;
 
+}
+
+.nonHomeTitle{
+
+padding-bottom: 10px;
 }

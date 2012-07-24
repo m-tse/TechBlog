@@ -3,13 +3,14 @@
 
 <div class="container-fluid">
 
-<h1>Resume</h1>
+<h1 class="nonHomeTitle">Resume</h1>
 
   <div class="row-fluid">
     <div class="span2">
       <h2>nav</h2>
       <ul class="unstyled">
-	<li>Education</li>
+	<li><%= link_to "Education", :controller => "static_pages",
+:action => "resumeSelect"  %></li>
 	<li>Work Experience</li>
 	<li>CS Projects</li>
       </ul>

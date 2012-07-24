@@ -7,7 +7,7 @@ TechBlog::Application.routes.draw do
 
 match '/new_post', to: 'posts#new'
 match '/contact', to: 'static_pages#contact'
-match '/resume', to: 'static_pages#resume'
+match '/resume', to: 'resume#index'
 match '/projects', to: 'static_pages#projects'
 match '/about', to: 'static_pages#about'
 match '/signup', to: 'users#new'
