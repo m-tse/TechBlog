@@ -2,7 +2,7 @@
   <h2 class="postTitle"><%= post.title %></h2>
   <h4 class="postNameTimeStamp">By <%= link_to "me", about_path %> at 
 <%= post.created_at.strftime("%I:%M %p, %A %B %d, %Y") %></h4>
-  <p><%= post.content %></p>
+  <p><%= simple_format post.content %></p>
 <% if admin_signed_in? %>
 <%= link_to "delete", post, method: :delete, data: { confirm: "You sure?"},
 title: post.content %>
