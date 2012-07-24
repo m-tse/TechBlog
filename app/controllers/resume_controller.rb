@@ -1,14 +1,22 @@
 class ResumeController < ApplicationController
   def index
     if @selector == nil
-      render :education
-    else
-    render :workExperience
+      @selector = :education
     end
   end
+
   def education
+    @selector = :education
+    render :index
   end
 
-  def workExperience
+  def work
+    @selector = :work
+    render :index
+  end
+
+  def projects
+    @selector = :projects
+    render :index
   end
 end

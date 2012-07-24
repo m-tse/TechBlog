@@ -1,0 +1,21 @@
+<% provide(:title, 'Education') %>
+
+<div class="container-fluid">
+
+<h1 class="nonHomeTitle">Resume</h1>
+
+  <div class="row-fluid">
+    <div class="span2">
+      <h2>nav</h2>
+      <ul class="unstyled">
+	<li><%= link_to "Education", resume_education_path %></li>
+	<li><%= link_to "Work Experience", resume_work_path %></li>
+	<li><%= link_to "Projects", resume_projects_path %></li>
+      </ul>
+    </div>
+    <div class="span10">
+      <h2>content</h2>
+      <%= render "resumeDetails"%>
+    </div>
+  </div>
+</div>
