@@ -1,0 +1,18 @@
+<dl class="resume">
+  <h3>Education</h3>
+  <dt>Duke University, Durham NC</dt>
+  <dd>Bachelor of Science, Computer Science Major, Mathematics Minor</dd>
+  <dd>Coursework:</dd>
+  <dd>
+    <ul>
+      <li>CS100 Data Structures & Algorithms - Astrachan</li>
+      <li>CS104 Computer Organization & Programming - Hilton</li>
+      <li>CS102 Discreet Math for CS - Rodgers</li>
+      <li>CS108 Software Design & Implementation - Hewner</li>
+      <li>CS110 Intro to Operating Systems - Chase</li>
+      <li>CS130 Design & Analysis of Algorithms</li>
+    </ul>
+  <dd>
+    <dt>Livingston High School, Livingston NJ</dt>	
+  <dd>graduated June 2010</dd>
+</dl>
