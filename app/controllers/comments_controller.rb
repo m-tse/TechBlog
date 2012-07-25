@@ -1,3 +1,4 @@
+
 class CommentsController < ApplicationController
   before_filter :signed_in_user, only: [:create]
   def create
@@ -26,3 +27,4 @@ content: params[:comment][:content])
   end
 
 end
+
