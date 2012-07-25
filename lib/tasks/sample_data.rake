@@ -6,6 +6,9 @@ namespace :db do
 		 password_confirmation: "9yx5k3d1",
 		 email: "matt.s.tse@gmail.com")
 
+    User.create!(name: "Batman", password: "asdf",	
+		   password_confirmation: "asdf",
+		   email: "batman@gmail.com")	
     matt = User.first
     10.times do
       title= Faker::Lorem.sentence(1)
