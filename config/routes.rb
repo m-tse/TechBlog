@@ -1,6 +1,6 @@
 TechBlog::Application.routes.draw do
 
-
+  resources :comments
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts, only: [:create, :destroy]

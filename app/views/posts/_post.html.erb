@@ -10,7 +10,8 @@
 <%= render post.comments %>
 </ol>
 <% end %>
-
+<%= link_to "leave a comment", :controller => "comments",
+ :action => "new", :id => post.id %>
 
 
 <% if admin_signed_in? %>
