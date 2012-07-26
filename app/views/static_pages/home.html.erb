@@ -15,11 +15,11 @@
     <div class="span2">
       <h3>dates</h3>
     </div>
-    <div class="span8">
+    <div class="span9">
       <% if @user!=nil and @user.posts.any? %>
-      <ol class="posts">
-	<%= render @posts %>
-      </ol>
+      <ul class="unstyled posts">
+	<%= render @posts%>
+      </ul>
       <% end %>
 
     </div>

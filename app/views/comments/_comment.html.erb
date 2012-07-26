@@ -1,9 +1,9 @@
 <li class="comment">
 
-<p>posted by <%=User.find_by_id(comment.user_id).name %> at  <%= comment.created_at.localtime.strftime("%I:%M %p, %A %B %d, %Y") %></p>
+<h5 class="comment_byline">comment by <%=User.find_by_id(comment.user_id).name %> at  <%= comment.created_at.localtime.strftime("%I:%M %p, %A %B %d, %Y") %></h5>
 
 
-  <p><%= simple_format comment.content %></p>
+<%= simple_format comment.content, class:"comment_content" %>
 
 
 
