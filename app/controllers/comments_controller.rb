@@ -18,8 +18,8 @@ content: params[:comment][:content])
 
   def new
     if signed_in?
-      @postID=params[:id]
-      @comment=current_user.comments.build(post_id:@postID)
+      @post = Post.find_by_id(params[:id])
+      @comment=current_user.comments.build(post_id:params[:id])
     else
       flash[:error] = "Only signed in users can leave comments!"
       redirect_to root_path
