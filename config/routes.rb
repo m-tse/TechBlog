@@ -3,9 +3,10 @@ TechBlog::Application.routes.draw do
   resources :comments
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :posts, only: [:create, :destroy]
+  resources :posts, only: [:new, :create, :edit, :destroy, :update]
 
-match '/new_post', to: 'posts#new'
+
+
 match '/contact', to: 'static_pages#contact'
 match '/resume', to: 'resume#index'
 match '/resume_work', to: 'resume#work'
