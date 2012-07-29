@@ -14,13 +14,6 @@ describe Post do
   its(:user) { should==user}
   it { should be_valid}
 
-  describe "accessible attributes" do
-    it "should not allow access to user_id" do
-      expect do
-        Post.new(user_id: user.id)
-      end.should raise_error(ActiveModel::MassAssignmentSecurity::Error)
-    end
-  end
 
   describe "when user_id is not present" do
     before { @post.user_id = nil }

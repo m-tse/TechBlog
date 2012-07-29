@@ -39,12 +39,12 @@ describe "AuthenticationPages" do
         click_button "Sign in"
       end
 
-      it { should have_link('Sign out', href: signout_path)}
+      it { should have_link('Sign Out', href: signout_path)}
       it { should_not have_link('Signin', href: signin_path)}
 
       describe "followed by signout" do
-        before { click_link "Sign out" }
-        it { should_not have_selector('h1', text: "Admin Mode")}
+        before { click_link "Sign Out" }
+
         it { should_not have_selector('li', text: "Sign out")}
       end
     end

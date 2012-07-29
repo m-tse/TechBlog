@@ -2,16 +2,13 @@
 class CommentsController < ApplicationController
   before_filter :signed_in_user, only: [:create]
   def create
-    @comment = current_user.comments.build(post_id: params[:comment][:post_id], 
-content: params[:comment][:content])
- 
- p params
+    @comment = current_user.comments.build(params[:comment])
 
     if @comment.save
       flash[:success] = "Left a comment!"
       redirect_to root_path
     else
-      flash[:failure] = "nope didn't work"
+      flash[:failure] = "Error leaving comment, please try again."
       render 'comments/new'
     end
   end
