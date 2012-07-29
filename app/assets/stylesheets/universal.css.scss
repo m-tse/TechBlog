@@ -3,7 +3,11 @@
 /* universal */
 
 html { overflow-y: scroll; }
-body { padding-top: 60px;}
+body {
+padding-top: 60px;
+background-color:#F1FBE9;
+}
+
 /* section {overflow: auto;} */
 .center { text-align: center;}
 .center h1 { margin-bottom: 10px;}
