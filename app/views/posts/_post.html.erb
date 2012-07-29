@@ -1,6 +1,6 @@
 <li class="postElement">
-  <h2 class="postTitle"><%= post.title %></h2>
-  <h4 class="postNameTimeStamp">By <%= link_to "me", about_path %> at 
+  <h2 class="postTitle center"><%= post.title %></h2>
+  <h4 class="postNameTimeStamp center">By <%= link_to "me", about_path %> at 
 <%= post.created_at.strftime("%I:%M %p, %A %B %d, %Y") %></h4>
   <%= simple_format post.content, class:"post_content"%>
 
