@@ -4,8 +4,7 @@
 
 <% elsif admin_signed_in? %>
 <li id="fat-menu" class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-    Admin <b class="caret"></b>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="adminDropdown"> Admin <b class="caret"></b>
   </a>
   <ul class="dropdown-menu">
     <li><%= link_to "New Post", new_post_path %></li>
