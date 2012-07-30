@@ -8,13 +8,14 @@
       <%= simple_format @post.content, class:"post_content" %>
       <h4 id="comment_header">comment form</h4>
       <%= form_for(@comment) do |f| %>
+    <%= render 'shared/error_messages', object: f.object  %>
       <div class="controls" id = "comment_form">
 	<%= f.text_area :content, placeholder: "Leave a comment..", rows:5, class:"input-xxlarge" %>
       </div>
       
       <%= f.hidden_field :post_id %>
       <div class = "form-actions">
-	<%= f.submit "Post", class: "btn btn-large btn-primary" %>
+	<%= f.submit "Comment", class: "btn btn-large btn-primary" %>
       </div>
       <% end %>
     </div>

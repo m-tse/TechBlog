@@ -4,5 +4,5 @@ class Comment < ActiveRecord::Base
   has_one :post
   validates :user_id, presence: true
   validates :post_id, presence: true
-  validates :content, presence: true, length: { maximum: 200 }
+  validates :content, presence: true, length: { maximum: 400 }
 end

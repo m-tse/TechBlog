@@ -33,6 +33,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post=current_user.posts.find_by_id(params[:id])
     @post.destroy
     redirect_to root_path
   end

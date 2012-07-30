@@ -6,17 +6,22 @@ describe "Post pages" do
   let(:admin_error) {"Only a signed in admin user can work with posts!"}
 
   let(:user) { FactoryGirl.create(:user)}
+  let(:admin) { User.new(name:"Matthew Tse", password:"3af44c4k", 
+                         password_confirmation:"3af44c4k", email:"matt.s.tse@gmail.com") }
 
   describe "admin user should be able to put up a post" do
-    let(:admin) { User.new(name:"Matthew Tse", password:"3af44c4k", 
-                           password_confirmation:"3af44c4k", email:"matt.s.tse@gmail.com") }
+
 
    before do
-      sign_in(admin)
-
+      visit signin_path
+      fill_in "Email", with: admin.email
+      fill_in "Password", with: admin.password
+      click_button "Sign in"
+      visit new_post_path
     end
 
-    it { should have_selector('h1', text: 'New Post')}
+    it { should have_selector('brand', text: 'Admin')}
+
 
   end
 

@@ -1,23 +1,29 @@
 <li class="postElement">
   <h3 class="postTitle center"><%= post.title %></h3>
   <h5 class="postNameTimeStamp center">By <%= link_to "Matthew Tse", about_path %> at 
-<%= post.created_at.strftime("%I:%M %p, %A %B %d, %Y") %></h5>
+    <%= post.created_at.strftime("%I:%M %p, %A %B %d, %Y") %></h5>
+
+  <% if !post.photo.url.include?("missing.png") %>
+  <div class="center post_photo">
+    <%= image_tag post.photo.url %>
+  </div>
+  <% end %>
+
   <%= simple_format post.content, class:"post_content"%>
 
 <% if post.comments.any? %>
-<!--h4 id="comment_header">Comments</h4-->
+
 <ul class="unstyled comments">
 <%= render post.comments %>
 </ul>
 <% end %>
-<%= link_to "leave a comment", :controller => "comments",
- :action => "new", :id => post.id, class:"leave_a_comment" %>
 
-
+<%= link_to "leave a comment", {controller:"comments",
+ action:"new", id:post.id}, :class => "comment_button btn"%>
 
 <% if admin_signed_in? %>
 <%= link_to "delete", post, method: :delete, data: { confirm: "You sure?"},
-title: post.content %>
+title: post.content%>
 <%= link_to "edit", edit_post_path(post)%>
 <% end %>
 
