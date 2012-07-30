@@ -18,8 +18,6 @@ describe "Post pages" do
       fill_in "Email", with: admin.email
       fill_in "Password", with: admin.password
       click_button "Sign in"
-      visit new_post_path
-      pp "asdfasdf"
     end
 
     it { should have_selector('brand', text: 'Admin')}
