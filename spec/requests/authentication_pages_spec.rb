@@ -31,7 +31,8 @@ describe "AuthenticationPages" do
 
     end
 
-    describe "with valid information" do
+
+    describe "with valid information"  do
       let(:user) { FactoryGirl.create(:user)}
       before do
         fill_in "Email", with: user.email

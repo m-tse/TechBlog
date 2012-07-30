@@ -8,10 +8,10 @@ TechBlog::Application.routes.draw do
 
 
 match '/contact', to: 'static_pages#contact'
-match '/resume', to: 'resume#index'
-match '/resume_work', to: 'resume#work'
-match '/resume_education', to: 'resume#education'
-match '/resume_projects', to: 'resume#projects'
+match '/resume', to: 'static_pages#resume'
+#match '/resume_work', to: 'resume#work'
+#match '/resume_education', to: 'resume#education'
+#match '/resume_projects', to: 'resume#projects'
 match '/projects', to: 'static_pages#projects'
 match '/about', to: 'static_pages#about'
 match '/signup', to: 'users#new'

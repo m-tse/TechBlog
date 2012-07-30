@@ -12,15 +12,8 @@ class StaticPagesController < ApplicationController
   end
 
   def resume
-    if(@resumeSelector==nil)
-      @resumeSelector = :projects
-    end
   end
 
-  def resumeSelect
-    @resumeSelector = :education
-    redirect_to resume_path
-  end
 
   def projects
   end

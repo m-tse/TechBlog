@@ -17,13 +17,14 @@
 <%= render post.comments %>
 </ul>
 <% end %>
+<div class="btn-group">
+     <%= link_to "Leave a Comment", {controller:"comments",
+	 action:"new", id:post.id}, class:"comment_button btn"%>
+     
+     <% if admin_signed_in? %>
+     <%= link_to "Delete Post", post, method: :delete, class:"btn", data:{confirm: "Are you sure?"}%>
 
-<%= link_to "leave a comment", {controller:"comments",
- action:"new", id:post.id}, class:"comment_button btn"%>
-
-<% if admin_signed_in? %>
-<%= link_to "delete", post, {method: :delete, data: { confirm: "Are you sure?"}}, class:"btn"%>
-<%= link_to "edit", edit_post_path(post), class:"btn"%>
-<% end %>
-
+     <%= link_to "Edit", edit_post_path(post), :class => "btn" %>
+  <% end %>
+</div>
 </li>
