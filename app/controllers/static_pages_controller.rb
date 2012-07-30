@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
 
     @user = User.find_by_email("matt.s.tse@gmail.com")
     if(@user!=nil)
-    @posts = @user.posts
+    @posts = @user.posts.paginate(page: params[:page], :per_page =>2)
     end
   end
 
