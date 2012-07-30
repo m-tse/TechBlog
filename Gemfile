@@ -6,6 +6,9 @@ gem 'bcrypt-ruby'
 gem 'factory_girl_rails'
 gem 'faker'
 gem "paperclip"
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
