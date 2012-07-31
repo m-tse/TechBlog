@@ -7,8 +7,8 @@
 
 
 
-  <div class="row-fluid" id="mainPagePosts">
-    <div class="span9">
+  <div class="row" id="mainPagePosts">
+    <div class="span10 offset1">
       <% if @user!=nil and @user.posts.any? %>
       <ul class="unstyled posts">
 	<%= render @posts%>
@@ -17,9 +17,9 @@
       <% end %>
 
     </div>
-    <div class="span2">
+    <!--div class="span2">
       <h3>dates</h3>
-    </div>
+    </div-->
 
   </div><!--row fluid-->
 </div><!--fluid container-->
