@@ -6,6 +6,7 @@ gem 'bcrypt-ruby'
 gem 'factory_girl_rails'
 gem 'faker'
 gem "paperclip"
+gem 'aws-sdk'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
