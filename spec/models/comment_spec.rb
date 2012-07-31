@@ -16,7 +16,5 @@ describe Comment do
   its(:user) { should==user}
   it { should be_valid}
   
-  describe "leave a comment on a post" do
-    
-  end
+
 end

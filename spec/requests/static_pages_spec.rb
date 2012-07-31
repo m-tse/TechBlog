@@ -14,9 +14,9 @@ describe "StaticPages" do
   end
 
   describe "Resume Page" do
-    it "should have Education title" do
+    it "should have resume title" do
       visit resume_path
-      page.should have_selector('title', :text => "#{base_title} | Education")
+      page.should have_selector('title', :text => "#{base_title} | Resume")
     end
   end
 
