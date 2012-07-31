@@ -13,13 +13,11 @@
       <ul class="unstyled posts">
 	<%= render @posts%>
       </ul>
-      <%= will_paginate @posts%>
+      <%= will_paginate @posts, class:"pagination pagination-centered"%>
       <% end %>
 
     </div>
-    <!--div class="span2">
-      <h3>dates</h3>
-    </div-->
+ 
 
-  </div><!--row fluid-->
-</div><!--fluid container-->
+  </div>
+</div>

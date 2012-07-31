@@ -4,11 +4,9 @@
 li{
 list-style-type: none;
 padding-bottom:2em;
-
-
-
 }
 }
+
 
 .post_content{
 padding-left:10px;
@@ -19,18 +17,22 @@ padding-right:10px;
 padding-top:25px;
 
 }
-
-.postTitle {
+.postTitle{
 background-color:#E9E9F4;
-#padding-left:1em;
+margin-bottom:4px;
 border-radius: 4em 4em 4em 4em;
 }
 
 .postNameTimeStamp{
-padding-bottom:1em;
+margin-bottom:5px;
 }
 
 
 .post_photo{
 padding-bottom:1em;
+}
+
+
+#post_button_group{
+padding-left: 1em;
 }

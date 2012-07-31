@@ -9,11 +9,18 @@ namespace :db do
     User.create!(name: "Batman", password: "asdf",	
 		   password_confirmation: "asdf",
 		   email: "batman@gmail.com")	
-    matt = User.first
+    matt = User.find_by_email("matt.s.tse@gmail.com")
+    batman = User.find_by_email("batman@gmail.com")
+	
     10.times do
       title= Faker::Lorem.sentence(1)
-      content = Faker::Lorem.sentence(50)
-      matt.posts.create!(content: content, title: title)
+      content = Faker::Lorem.sentence(400)
+      apost = matt.posts.create!(content: content, title: title)
+
+      2.times do
+        commentContent = Faker::Lorem.sentence(20)
+	batman.comments.create!(content:commentContent, post_id:apost.id)
+      end
     end   
   end
 end
