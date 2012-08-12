@@ -9,7 +9,7 @@ gem "paperclip"
 gem 'aws-sdk'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-
+gem 'redcarpet'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

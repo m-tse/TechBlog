@@ -1,3 +1,4 @@
+
 <li class="postElement">
   <h2 class="postTitle center"><%= post.title %></h2>
   <h5 class="postNameTimeStamp center">By <%= link_to "Matthew Tse", about_path %> at 
@@ -8,9 +9,9 @@
     <%= image_tag post.photo.url %>
   </div>
   <% end %>
-
-  <%= simple_format post.content, class:"post_content"%>
-
+<div class="postcontent">
+  <%= markdown(post.content)%>
+</div>
 <% if post.comments.any? %>
 
 <ul class="unstyled comments">

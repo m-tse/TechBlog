@@ -22,5 +22,12 @@ namespace :db do
 	batman.comments.create!(content:commentContent, post_id:apost.id)
       end
     end   
+    
+    contenthash = {"resume_education"=>"Education!!", "resume_work_experience"=>"Work Experience!!", "resume_projects"=>"projects!!", "about_me"=>"ABOUT ME!!", "contact_me"=>"CONTACT ME!!!", "projects"=>"projects!!!!!!!"}
+    contenthash.each_pair do |k,v|
+      PageContent.create!(name:k, content:v)
+    end
+
+
   end
 end

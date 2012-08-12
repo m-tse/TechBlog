@@ -9,15 +9,21 @@ class StaticPagesController < ApplicationController
 
 
   def contact
+@contact_me = PageContent.find_by_name("contact_me")
   end
 
   def resume
+    @resume_education = PageContent.find_by_name("resume_education")
+    @resume_projects = PageContent.find_by_name("resume_projects")
+    @resume_work_experience = PageContent.find_by_name("resume_work_experience")
   end
 
 
   def projects
+    @projects = PageContent.find_by_name("projects")
   end
 
   def about
+    @about_me = PageContent.find_by_name("about_me")
   end
 end

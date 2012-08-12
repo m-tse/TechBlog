@@ -21,6 +21,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update_attributes(params[:post])
+      p params
       flash[:success] = "Post edited!"
       redirect_to root_path
     else
@@ -39,7 +40,7 @@ class PostsController < ApplicationController
   end
 
   private
-   def admin_user
+  def admin_user
     if !admin_signed_in?
       flash[:error] = "Only a signed in admin user can work with posts!"
       redirect_to root_path

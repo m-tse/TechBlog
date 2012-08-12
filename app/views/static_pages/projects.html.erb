@@ -1,6 +1,10 @@
 <% provide(:title, 'Projects') %>
 <div class="container">
-<h1 class="nonHomeTitle">Projects</h1>
+  <%= markdown(@projects.content) %>
+<!--h1 class="nonHomeTitle">Projects</h1>
 <p>This website is one.  I'm constantly updating it, adding new stylings and features to it.  Keep checking back to see what new things I've done.</p>
-<p>Keep track of my latest projects on <a href="https://github.com/tS3m">GitHub</a>.</p>
+<p>Keep track of my latest projects on <a href="https://github.com/tS3m">GitHub</a>.</p-->
+<% if admin_signed_in? %>
+<%= link_to "Edit", edit_page_content_path(@projects), :class => "btn" %>
+<% end %>
 </div>
